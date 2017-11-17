@@ -276,7 +276,7 @@ public class XStream2Test {
      * Tests that ConcurrentHashMap is serialized into a more compact format,
      * but still can deserialize to older, verbose format.
      */
-    @Test
+/*    @Test
     public void concurrentHashMapSerialization() throws Exception {
         Foo2 foo = new Foo2();
         foo.m.put("abc","def");
@@ -301,7 +301,7 @@ public class XStream2Test {
         Foo2 map = (Foo2) new XStream2().fromXML(getClass().getResourceAsStream("old-concurrentHashMap.xml"));
         assertEquals(1,map.m.size());
         assertEquals("def",map.m.get("abc"));
-    }
+    }*/
 
     @Issue("SECURITY-105")
     @Test
