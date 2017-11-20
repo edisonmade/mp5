@@ -21,6 +21,12 @@ public class IdStrategyTest {
 	public void testIdFromFilesNameOuptut2() {
 		IdStrategy.CaseSensitive obj = new IdStrategy.CaseSensitive();
 		assertEquals(obj.idFromFilename("$11111"),"ᄑ1");
+		
+	}
+	@Test
+	public void testIdFromFilesNameOuptut3() {
+		IdStrategy.CaseSensitive obj = new IdStrategy.CaseSensitive();
+		assertEquals(obj.idFromFilename("$0041"),"A");
 	}
 
 }
