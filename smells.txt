@@ -1,0 +1,10 @@
+smells.txt
+Mitchell McClure
+Eduardo Banda
+Bo Wang
+1.This is a duplicated code smell. To remove it you would take the duplicated code and put it into a function.
+2.
+3. This new method does not belong to the Node class because the jenkins is the only thing calling the functions. It would make more sends to move to the jenkins.model.Jenkins class. This is also a duplicated code smell. To remove it you would take the two functions and put it in one function.
+4. Because it increments and validates the condition, and then increments and validates so on and so forth, this logic would be better in a while loop.
+5.
+6. It was duplicated code in CronTabTest so we extracted the code and put it in a new method that was passed a calendar object.
