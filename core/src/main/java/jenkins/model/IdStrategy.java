@@ -245,9 +245,39 @@ public abstract class IdStrategy extends AbstractDescribableImpl<IdStrategy> imp
                             buf.append(Character.toUpperCase(chars[i]));
                         }
                     } else if (c == '$') {
-                        StringBuilder hex = new StringBuilder(4);
-                       
+                
+                    	StringBuilder hex = new StringBuilder(4);
+                    	
+                    	/*
+                    	i++;
+                    	if(i<chars.length) {
+                    		hex.append(chars[i]);
+                    	}
+                    	else {//breakLoop = true;
+                    			break;}
+                    	i++;
+                    	if(i<chars.length) {
+                    		hex.append(chars[i]);
+                    	}
+                    	else {//breakLoop = true;
+                    			break;}
+                    	i++;
+                    	if(i<chars.length) {
+                    		hex.append(chars[i]);
+                    	}
+                    	else {//breakLoop = true;
+                    			break;}
+                    	i++;
+                    	if(i<chars.length) {
+                    		hex.append(chars[i]);
+                    	}
+                    	else {//breakLoop = true;
+                    			break;}
+                    	buf.append(Character.valueOf((char)Integer.parseInt(hex.toString(), 16)));
+                    	*/
                         
+                       
+                        //re-factor code 
                         boolean breakLoop= false;
                         for(int j=0;j<4;j++)
                         {
@@ -264,6 +294,7 @@ public abstract class IdStrategy extends AbstractDescribableImpl<IdStrategy> imp
                         
                         
                         buf.append(Character.valueOf((char)Integer.parseInt(hex.toString(), 16)));
+                        
                     }
                 }
                 return buf.toString();
